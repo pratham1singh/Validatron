@@ -2,6 +2,8 @@ com.validatron.validatron.engine.EmailValidator
 com.validatron.validatron.engine.NotNullValidator
 com.validatron.validatron.engine.NotEmptyValidator
 com.validatron.validatron.engine.NotBlankValidator
+com.validatron.validatron.engine.allowedValues.AllowedValuesDelegatingValidator
+
 
 
 

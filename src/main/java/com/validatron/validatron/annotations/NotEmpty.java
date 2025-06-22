@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 
 @Documented
 @Constraint(validatedBy = {})
-@Target({ ElementType.METHOD, ElementType.FIELD })
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotEmpty {
     String message() default "Field cannot be empty!";

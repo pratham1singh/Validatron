@@ -9,8 +9,10 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = {})
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotBlank {
-    String message() default "Field cannot be blank!";
+public @interface AllowedValues {
+    String message() default "Invalid email address";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
+
+    String[] allowedValues();
 }
