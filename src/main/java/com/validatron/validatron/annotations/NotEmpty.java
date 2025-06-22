@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotEmpty {
-    String message() default "Field cannot be empty!";
+    String message() default "{NotEmpty.default}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AllowedValues {
-    String message() default "Invalid email address";
+    String message() default "{AllowedValues.default}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 

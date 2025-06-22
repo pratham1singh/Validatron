@@ -32,7 +32,8 @@ public class AllowedValuesDelegatingValidator implements ConstraintValidator<All
 
     @Override
     public boolean isValid(Object o, ConstraintValidatorContext context) {
-        if(o == null) return false;
+        if(o == null) return true;
+
         ConstraintValidator<AllowedValues, Object> validator = (ConstraintValidator<AllowedValues, Object>) this.constraintValidatorMap.get(o.getClass());
         if(validator == null) {
             throw new IllegalArgumentException(MessageFormat.format("@AllowedValues not available for {0} type!", o.getClass()));
