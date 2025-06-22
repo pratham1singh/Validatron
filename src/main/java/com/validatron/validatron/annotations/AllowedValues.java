@@ -9,8 +9,10 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = {})
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotEmpty {
-    String message() default "{NotEmpty.default}";
+public @interface AllowedValues {
+    String message() default "{AllowedValues.default}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
+
+    String[] allowedValues();
 }

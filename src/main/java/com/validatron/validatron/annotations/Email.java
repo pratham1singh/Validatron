@@ -7,10 +7,10 @@ import java.lang.annotation.*;
 
 @Documented
 @Constraint(validatedBy = {})
-@Target({ ElementType.METHOD, ElementType.FIELD })
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Email {
-    String message() default "Invalid email address";
+    String message() default "{Email.default}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

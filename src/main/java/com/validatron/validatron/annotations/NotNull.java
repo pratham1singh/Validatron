@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotNull {
-    String message() default "Field cannot be null!";
+    String message() default "{NotNull.default}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

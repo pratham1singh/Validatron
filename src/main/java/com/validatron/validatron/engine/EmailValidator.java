@@ -10,7 +10,9 @@ public class EmailValidator implements ConstraintValidator<Email, String> {
 
     @Override
     public boolean isValid(String email, ConstraintValidatorContext context) {
-        return email != null && email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
+        if(email == null) return true;
+
+        return email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
     }
 }
 
