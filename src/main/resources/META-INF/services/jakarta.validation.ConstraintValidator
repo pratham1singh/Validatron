@@ -4,6 +4,4 @@ com.validatron.validatron.engine.NotEmptyValidator
 com.validatron.validatron.engine.NotBlankValidator
 com.validatron.validatron.engine.allowedValues.AllowedValuesDelegatingValidator
 
-
-
-
+com.validatron.validatron.engine.FieldsMatchValidator
